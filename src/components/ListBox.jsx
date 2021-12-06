@@ -11,8 +11,8 @@ function ListBox(props) {
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <ListGroup variant="flush">
-          {content.map((c) => (
-            <ListGroup.Item as="a" active={false} href={c.link}>
+          {content.map((c, i) => (
+            <ListGroup.Item key={i} as="a" active={false} href={c.link}>
               {c.text}
             </ListGroup.Item>
           ))}

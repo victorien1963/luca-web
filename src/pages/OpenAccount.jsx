@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
 import { FormDialog, InfoDialog, ShowcaseCard } from '../components'
 
 function OpenAccount() {
@@ -62,7 +64,20 @@ function OpenAccount() {
           </Col>
         ))}
       </Row>
-      <FormDialog show={showForm} handleClose={handleCloseForm} />
+      <FormDialog
+        show={showForm}
+        handleClose={handleCloseForm}
+        setting={{
+          size: 'xl',
+          title: '申請廣告帳戶',
+          content: [
+            { name: '用戶名稱', type: 'fixed', value: 'Kevin' },
+            { name: '帳戶名稱', type: 'text', value: '' },
+            { name: '公司統編', type: 'text', value: '' },
+            { name: '電子信箱', type: 'email', value: '' },
+          ],
+        }}
+      />
       <InfoDialog show={showInfo} handleClose={handleCloseInfo} />
     </Container>
   )

@@ -1,24 +1,25 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Card from 'react-bootstrap/Card'
+import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import LoginForm from './LoginForm'
 import RegisterForm from './RegisterForm'
 
 function Form(props) {
   const [action, setAction] = useState('login')
-  const { fakeAuth } = props
+  const { show, handleClose } = props
+  const fakeAuth = { status: 'authed', name: 'RD' }
   return (
-    <Card className="p-2">
-      <Card.Title>{action === 'login' ? 'Login' : 'Register'}</Card.Title>
-      <Card.Body>
+    <Modal show={show} onHide={() => handleClose()} className="p-2">
+      <Modal.Title>{action === 'login' ? 'Login' : 'Register'}</Modal.Title>
+      <Modal.Body>
         {action === 'login' && <LoginForm />}
         {action === 'register' && <RegisterForm />}
-        <Button variant="primary" onClick={() => fakeAuth()}>
+        <Button variant="primary" onClick={() => handleClose(fakeAuth)}>
           {action === 'login' ? 'Login' : 'Register'}
         </Button>
-      </Card.Body>
-      <Card.Footer>
+      </Modal.Body>
+      <Modal.Footer>
         <Button
           style={{ boxShadow: 'none' }}
           variant="link"
@@ -26,13 +27,14 @@ function Form(props) {
         >
           {action === 'login' ? 'Register now' : 'already have an account?'}
         </Button>
-      </Card.Footer>
-    </Card>
+      </Modal.Footer>
+    </Modal>
   )
 }
 
 Form.propTypes = {
-  fakeAuth: PropTypes.func.isRequired,
+  show: PropTypes.bool.isRequired,
+  handleClose: PropTypes.func.isRequired,
 }
 
 export default Form

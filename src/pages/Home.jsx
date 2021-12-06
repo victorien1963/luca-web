@@ -1,10 +1,16 @@
-import React, { useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import { LoginForm, LinkBox, ListBox, ShowcaseCard } from '../components'
+import React from 'react'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
+import {
+  LinkBox,
+  ListBox,
+  ShowcaseCard,
+  Slide,
+  StatisticBox,
+} from '../components'
 
 function Home() {
-  const [auth, setauth] = useState(undefined)
-  const fakeAuth = () => setauth({ name: 'RD' })
   const fakeGrids = [
     {
       title: '申請開戶',
@@ -28,18 +34,13 @@ function Home() {
       link: '/Accounts',
     },
   ]
-  return auth ? (
+  return (
     <Container fluid>
       <Row>
         <Col xs="10">
           <Row>
             <Col className="p-1">
-              <ShowcaseCard
-                setting={{
-                  imgSrc:
-                    'https://www.wavenet.com.tw/wp-content/uploads/2021/11/首頁-Banner-Slider-1920x600.001-min.png',
-                }}
-              />
+              <Slide />
             </Col>
           </Row>
           <Row>
@@ -52,20 +53,16 @@ function Home() {
             </Col>
           </Row>
           <Row>
-            {fakeGrids.map((grid) => (
-              <Col className="p-1">
+            {fakeGrids.map((grid, i) => (
+              <Col key={i} className="p-1">
                 <ShowcaseCard setting={grid} />
               </Col>
             ))}
-            {/* <Col className="p-1">
-              <ShowcaseCard />
+          </Row>
+          <Row>
+            <Col className="p-2">
+              <StatisticBox />
             </Col>
-            <Col className="p-1">
-              <ShowcaseCard />
-            </Col>
-            <Col className="p-1">
-              <ShowcaseCard />
-            </Col> */}
           </Row>
         </Col>
         <Col xs="2">
@@ -73,7 +70,37 @@ function Home() {
             <ListBox />
           </Row>
           <Row className="p-1">
-            <LinkBox title="活動預告" />
+            <LinkBox
+              setting={{
+                title: '活動預告',
+                content: [
+                  {
+                    title: '跨平台整合',
+                    content:
+                      '在 PUNWAVE 的技術架構下，Nautilus 報表系統承襲跨媒體的優勢。',
+                    imgSrc:
+                      'https://www.wavenet.com.tw/wp-content/uploads/2020/01/Nautilus-%E5%84%AA%E5%8B%A2_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%95%B4%E5%90%88-min.jpeg',
+                    link: 'https://nautilus.punwave.com/',
+                  },
+                  {
+                    title: '跨平台整合',
+                    content:
+                      '在 PUNWAVE 的技術架構下，Nautilus 報表系統承襲跨媒體的優勢。',
+                    imgSrc:
+                      'https://www.wavenet.com.tw/wp-content/uploads/2020/01/Nautilus-%E5%84%AA%E5%8B%A2_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%95%B4%E5%90%88-min.jpeg',
+                    link: 'https://nautilus.punwave.com/',
+                  },
+                  {
+                    title: '跨平台整合',
+                    content:
+                      '在 PUNWAVE 的技術架構下，Nautilus 報表系統承襲跨媒體的優勢。',
+                    imgSrc:
+                      'https://www.wavenet.com.tw/wp-content/uploads/2020/01/Nautilus-%E5%84%AA%E5%8B%A2_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%95%B4%E5%90%88-min.jpeg',
+                    link: 'https://nautilus.punwave.com/',
+                  },
+                ],
+              }}
+            />
           </Row>
           <Row className="p-1">
             <LinkBox />
@@ -81,8 +108,6 @@ function Home() {
         </Col>
       </Row>
     </Container>
-  ) : (
-    <LoginForm fakeAuth={fakeAuth} />
   )
 }
 

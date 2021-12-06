@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import {
   FormDialog,
-  // ShowcaseCard,
   InfoDialog,
   Datatable,
   SearchBar,
   SelectBar,
+  Progress,
 } from '../components'
 
 function Billing() {
@@ -23,63 +25,22 @@ function Billing() {
     if (value) handleShowInfo(true)
   }
 
-  // const fakeGrids = [
-  //   {
-  //     title: 'Facebook',
-  //     content: '在社群網站上爭取大量曝光，取得最佳廣告成效',
-  //     imgSrc:
-  //       'https://www.wavenet.com.tw/wp-content/uploads/2020/01/Nautilus-%E5%84%AA%E5%8B%A2_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%95%B4%E5%90%88-min.jpeg',
-  //     // link: '/OpenAccount?target=Facebook',
-  //     method: handleShowForm,
-  //   },
-  //   {
-  //     title: 'Yahoo',
-  //     content: '在Yahoo服務秀出廣告，發現無限商機',
-  //     imgSrc:
-  //       'https://www.wavenet.com.tw/wp-content/uploads/2020/01/Nautilus-%E5%84%AA%E5%8B%A2_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%95%B4%E5%90%88-min.jpeg',
-  //     // link: '/OpenAccount?target=Yahoo',
-  //     method: handleShowForm,
-  //   },
-  //   {
-  //     title: 'Google',
-  //     content: '透過主流搜尋引擎和GDN聯播網精準鎖定客群',
-  //     imgSrc:
-  //       'https://www.wavenet.com.tw/wp-content/uploads/2020/01/Nautilus-%E5%84%AA%E5%8B%A2_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%95%B4%E5%90%88-min.jpeg',
-  //     // link: '/OpenAccount?target=Google',
-  //     method: handleShowForm,
-  //   },
-  //   {
-  //     title: 'Twitter',
-  //     content: '打入Twitter生活圈，發掘潛在客戶',
-  //     imgSrc:
-  //       'https://www.wavenet.com.tw/wp-content/uploads/2020/01/Nautilus-%E5%84%AA%E5%8B%A2_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%95%B4%E5%90%88-min.jpeg',
-  //     // link: '/OpenAccount?target=Twitter',
-  //     method: handleShowForm,
-  //   },
-  // ]
-  // const target = new URL(window.location.href).searchParams.get('target')
   return (
     <Container fluid>
       <Row className="p-2">
         <h4>廣告帳戶管理</h4>
       </Row>
-      <Row className="p-2">
-        <Col xs="6">
-          <SelectBar />
-        </Col>
-        {/* <Col xs="6">
-          <ShowcaseCard
-            setting={{
-              title: 'Welcome to Wavenet',
-            }}
-          />
-        </Col> */}
+      <Row className="p-3">
+        <Progress />
       </Row>
       <Row className="p-2">
-        <Col xs="6">
+        <Col xs="5">
+          <SelectBar />
+        </Col>
+        <Col xs="5">
           <SearchBar />
         </Col>
-        <Col xs="6">
+        <Col xs="2">
           <Button onClick={handleShowForm}>儲值</Button>
         </Col>
       </Row>
@@ -109,6 +70,7 @@ function Billing() {
         />
       </Row>
       <FormDialog
+        size="md"
         show={showForm}
         handleClose={handleCloseForm}
         setting={{
