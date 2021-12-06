@@ -10,7 +10,7 @@ function InfoDialog(props) {
   const { imgSrc, content } = setting
   return (
     <Modal show={show} onHide={handleClose}>
-      <Modal.Body>
+      <Modal.Body className="App-textCenter">
         <Image src={imgSrc} fluid />
         {content}
       </Modal.Body>

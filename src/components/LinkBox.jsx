@@ -4,7 +4,6 @@ import Card from 'react-bootstrap/Card'
 
 function LinkBox(props) {
   const { title, setting } = props
-  // const { title, content, imgSrc, link } = setting
   return (
     <Card>
       <Card.Body>
