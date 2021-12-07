@@ -16,6 +16,10 @@
   text-align: center;
 }
 
+.App-notextDecoration{
+  text-decoration: none;
+}
+
 .App-textEllipsis{
   height: 2rem;
   display: -webkit-box;
@@ -25,8 +29,10 @@
 }
 
 .App-blackPanel{
-  opacity: 0.5;
-  background-color: #282c34;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 1)100%);
+  background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 1)100%);
+  background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 1)100%);
+  background: -o-linear-gradient(180deg, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 1)100%);
 }
 
 .App-logo {
@@ -53,6 +59,10 @@
 
 .text-white{
   color:#fff;
+}
+
+.text-black{
+  color:#000;
 }
 
 /* icons */

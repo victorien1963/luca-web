@@ -8,6 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import homeLogo from './images/react-brands.svg'
 import userIcon from './images/user-solid.svg'
 import bellIcon from './images/bell-solid.svg'
+// import loginIcon from './images/sign-in-alt-solid.svg'
 
 function NavBar(props) {
   const { setting } = props
@@ -15,7 +16,7 @@ function NavBar(props) {
   return (
     <Navbar bg="luca" expand="lg">
       <Container>
-        <Link to="/" style={{ textDecoration: 'none' }}>
+        <Link to="/" className="App-notextDecoration">
           <Navbar.Brand className="text-white">
             <img
               src={homeLogo}
@@ -35,6 +36,7 @@ function NavBar(props) {
               <NavDropdown
                 title={<img src={bellIcon} alt="User" />}
                 id="nav-dropdown-bell"
+                align="end"
               >
                 <NavDropdown.Item>系統通知示意</NavDropdown.Item>
                 <NavDropdown.Item>系統通知示意</NavDropdown.Item>
@@ -44,22 +46,37 @@ function NavBar(props) {
           </Navbar.Collapse>
 
           {/* User */}
-          <Navbar.Toggle aria-controls="navbar-nav-user" />
+          {/* <Navbar.Toggle aria-controls="navbar-nav-user" /> */}
           <Navbar.Collapse id="navbar-nav-user">
             <Nav className="nav-icons ms-auto">
               {auth.status === 'authed' ? (
                 <NavDropdown
                   title={<img src={userIcon} alt="User" />}
                   id="nav-dropdown-user"
+                  align="end"
                 >
-                  <NavDropdown.Item href="/Info">會員中心</NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link
+                      to="/Info"
+                      className="App-notextDecoration text-black"
+                    >
+                      會員中心
+                    </Link>
+                  </NavDropdown.Item>
+
                   <NavDropdown.Divider />
                   <NavDropdown.Item onClick={handleLogOut}>
                     登出
                   </NavDropdown.Item>
                 </NavDropdown>
               ) : (
-                <Nav.Link onClick={handleLoginShow}>登入</Nav.Link>
+                <Nav.Link
+                  className="d-flex nav-icons ms-auto text-white"
+                  onClick={handleLoginShow}
+                >
+                  {/* <img src={loginIcon} alt="Login" /> */}
+                  登入
+                </Nav.Link>
               )}
             </Nav>
           </Navbar.Collapse>

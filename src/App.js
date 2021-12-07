@@ -33,7 +33,7 @@ function App() {
           <NavBar setting={{ auth, handleLoginShow, handleLogOut }} />
           <ScrollToTop>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home auth={auth} />} />
               <Route path="/OpenAccount" element={<OpenAccount />} />
               <Route path="/Accounts" element={<Accounts />} />
               <Route path="/Billing" element={<Billing />} />

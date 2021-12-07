@@ -1,22 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Card from 'react-bootstrap/Card'
+// import Container from 'react-bootstrap/Container'
+// import Row from 'react-bootstrap/Row'
 
 function LinkBox(props) {
   const { setting } = props
   const { title, content } = setting
   return (
-    <Card>
+    <Card className="p-0">
       <Card.Body>
         <Card.Title className="App-textLeft">{title}</Card.Title>
         <hr />
         {content.map((c, i) => (
-          <Card key={i} className="my-2 pt-2">
+          <Card key={i} className="my-2 py-3">
             <Card.Img src={c.imgSrc} alt="Card image" />
-            <Card.ImgOverlay className="d-flex">
+            <Card.ImgOverlay className="d-flex App-blackPanel">
               {/* <Card.Title>{c.title}</Card.Title> */}
-              <div className="d-flex align-items-end App-blackPanel App-textLeft p-1">
-                <Card.Link href={c.link} className="App-textEllipsis">
+              <div className="d-flex align-items-end App-textLeft p-1">
+                <Card.Link
+                  href={c.link}
+                  className="text-white App-textEllipsis App-notextDecoration"
+                >
                   {c.content}
                 </Card.Link>
               </div>

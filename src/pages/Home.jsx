@@ -1,10 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 import {
   LinkBox,
   ListBox,
+  Showcase,
   ShowcaseCard,
   Slide,
   StatisticBox,
@@ -14,7 +16,8 @@ import addImg from './images/addaccount-img.png'
 import mngImg from './images/mngaccount-img.png'
 import anaImg from './images/analyze-img.png'
 
-function Home() {
+function Home(props) {
+  const { auth } = props
   const fakeGrids = [
     {
       title: '申請開戶',
@@ -40,28 +43,31 @@ function Home() {
       <Row>
         <Col xs="10">
           <Row className="p-1">
-            <AnnounceBar />
+            <AnnounceBar setting={{ content: 'Have some Announce?' }} />
           </Row>
           <Row>
             <Col className="p-1">
               <Slide />
             </Col>
           </Row>
-          <Row>
-            <Col className="p-2">
-              <ShowcaseCard
-                setting={{
-                  title: 'Hi User, Welcome to LUCA! how’s ur morning? ',
-                }}
-              />
-            </Col>
-          </Row>
-          <Row>
-            {fakeGrids.map((grid) => (
-              <Col className="home-content-cards p-1">
-                <ShowcaseCard setting={grid} />
-              </Col>
-            ))}
+          <Row className="p-2">
+            <Showcase
+              setting={{
+                title: `${
+                  auth.status === 'authed'
+                    ? `Hi ${auth.name}, Welcome to LUCA! how’s ur morning?`
+                    : `Welcome to LUCA! how’s ur morning?`
+                } `,
+              }}
+            >
+              <Row>
+                {fakeGrids.map((grid) => (
+                  <Col className="home-content-cards p-1">
+                    <ShowcaseCard setting={grid} />
+                  </Col>
+                ))}
+              </Row>
+            </Showcase>
           </Row>
           <Row>
             <Col className="p-2">
@@ -113,6 +119,10 @@ function Home() {
       </Row>
     </Container>
   )
+}
+
+Home.propTypes = {
+  auth: PropTypes.shape().isRequired,
 }
 
 export default Home

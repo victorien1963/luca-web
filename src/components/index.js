@@ -15,6 +15,7 @@ import Slide from './Slide'
 import AccountList from './AccountList'
 import ScrollToTop from './ScrollToTop'
 import AnnounceBar from './AnnounceBar'
+import Showcase from './Showcase'
 
 export {
   // nav and footer
@@ -26,6 +27,7 @@ export {
   InfoDialog,
   LinkBox,
   ListBox,
+  Showcase,
   ShowcaseCard,
   StatisticBox,
   Datatable,
