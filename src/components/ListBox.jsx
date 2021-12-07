@@ -30,10 +30,10 @@ ListBox.defaultProps = {
   setting: {
     title: '公告欄',
     content: [
-      { text: 'nautilus', link: 'https://nautilus.punwave.com/' },
-      { text: 'nautilus', link: 'https://nautilus.punwave.com/' },
-      { text: 'nautilus', link: 'https://nautilus.punwave.com/' },
-      { text: 'nautilus', link: 'https://nautilus.punwave.com/' },
+      { text: 'New! 系統更新公告', link: 'https://nautilus.punwave.com/' },
+      { text: '系統更新公告v3.1', link: 'https://nautilus.punwave.com/' },
+      { text: '系統更新公告v3.0', link: 'https://nautilus.punwave.com/' },
+      { text: '系統更新公告v2.9', link: 'https://nautilus.punwave.com/' },
     ],
   },
 }
