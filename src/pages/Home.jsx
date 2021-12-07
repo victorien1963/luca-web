@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { LoginForm, LinkBox, ListBox, ShowcaseCard } from '../components'
-import addImg from './images/addaccount-img.png'
-import mngImg from './images/mngaccount-img.png'
-import anaImg from './images/analyze-img.png'
+import addImg from './images/addaccount-img.svg'
+import mngImg from './images/mngaccount-img.svg'
+import anaImg from './images/analyze-img.svg'
 
 function Home() {
   const [auth, setauth] = useState(undefined)

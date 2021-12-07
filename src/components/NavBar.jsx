@@ -3,7 +3,8 @@ import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
-import homeLogo from './images/react-brands.svg'
+// import homeLogo from './images/react-brands.svg'
+import lucaLogo from './images/luca-logo.svg'
 import userIcon from './images/user-solid.svg'
 import bellIcon from './images/bell-solid.svg'
 
@@ -13,13 +14,11 @@ function NavBar() {
       <Container>
         <Navbar.Brand className="text-white" href="/">
           <img
-            src={homeLogo}
-            width="30"
-            height="30"
+            src={lucaLogo}
+            width="110"
             className="d-inline-block align-top me-2"
             alt="logo"
           />
-          L U C A
         </Navbar.Brand>
 
         <div className="ms-auto d-flex">
