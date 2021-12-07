@@ -11,8 +11,8 @@ function Form(props) {
   const fakeAuth = { status: 'authed', name: 'RD' }
   return (
     <Modal show={show} onHide={() => handleClose()} className="p-2">
-      <Modal.Title>{action === 'login' ? 'Login' : 'Register'}</Modal.Title>
       <Modal.Body>
+        <Modal.Title>{action === 'login' ? 'Login' : 'Register'}</Modal.Title>
         {action === 'login' && <LoginForm />}
         {action === 'register' && <RegisterForm />}
         <Button variant="primary" onClick={() => handleClose(fakeAuth)}>

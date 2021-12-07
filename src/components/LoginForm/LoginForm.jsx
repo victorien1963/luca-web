@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form'
 
 function Loginform() {
   return (
-    <Form className="p-3">
+    <Form className="py-2">
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />

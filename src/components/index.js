@@ -14,6 +14,7 @@ import SelectBar from './SelectBar'
 import Slide from './Slide'
 import AccountList from './AccountList'
 import ScrollToTop from './ScrollToTop'
+import AnnounceBar from './AnnounceBar'
 
 export {
   // nav and footer
@@ -33,6 +34,7 @@ export {
   Slide,
   AccountList,
   Progress,
+  AnnounceBar,
   // wrappers
   ScrollToTop,
 }

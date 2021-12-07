@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 
 function ShowcaseCard(props) {
   const { setting } = props
@@ -12,19 +13,13 @@ function ShowcaseCard(props) {
       <Card.Body>
         {title && <Card.Title>{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
+        {link && (
+          <Link to={link}>
+            <Button>Link</Button>
+          </Link>
+        )}
+        {method && <Button onClick={method}>Method</Button>}
       </Card.Body>
-      {link && (
-        <Card.Footer>
-          <Card.Link>
-            <Link to={link}>Link</Link>
-          </Card.Link>
-        </Card.Footer>
-      )}
-      {method && (
-        <Card.Footer>
-          <Card.Link onClick={method}>method</Card.Link>
-        </Card.Footer>
-      )}
     </Card>
   )
 }

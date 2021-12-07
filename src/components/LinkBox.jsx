@@ -9,18 +9,18 @@ function LinkBox(props) {
     <Card>
       <Card.Body>
         <Card.Title className="App-textLeft">{title}</Card.Title>
+        <hr />
         {content.map((c, i) => (
-          <Card key={i} className="my-2">
-            <Card.Body className="App-textLeft">
-              <Card.Title>{c.title}</Card.Title>
-              <Card.Img src={c.imgSrc} />
-              <Card.Text>{c.content}</Card.Text>
-            </Card.Body>
-            {c.link && (
-              <Card.Footer>
-                <Card.Link href={c.link}>Link</Card.Link>
-              </Card.Footer>
-            )}
+          <Card key={i} className="my-2 pt-2">
+            <Card.Img src={c.imgSrc} alt="Card image" />
+            <Card.ImgOverlay className="d-flex">
+              {/* <Card.Title>{c.title}</Card.Title> */}
+              <div className="d-flex align-items-end App-blackPanel App-textLeft p-1">
+                <Card.Link href={c.link} className="App-textEllipsis">
+                  {c.content}
+                </Card.Link>
+              </div>
+            </Card.ImgOverlay>
           </Card>
         ))}
       </Card.Body>

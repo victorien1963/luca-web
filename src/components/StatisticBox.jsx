@@ -33,7 +33,6 @@ StatisticBox.defaultProps = {
   setting: {
     title: '跨平台整合',
     content: '在 PUNWAVE 的技術架構下，Nautilus 報表系統承襲跨媒體的優勢。',
-    link: 'https://nautilus.punwave.com/',
   },
 }
 

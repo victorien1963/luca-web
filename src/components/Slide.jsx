@@ -29,7 +29,7 @@ Slide.propTypes = {
 
 Slide.defaultProps = {
   setting: {
-    interval: 1000,
+    interval: 6000,
     content: [
       {
         label: 'First Slide',

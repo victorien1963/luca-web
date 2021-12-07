@@ -8,6 +8,7 @@ import {
   ShowcaseCard,
   Slide,
   StatisticBox,
+  AnnounceBar,
 } from '../components'
 
 function Home() {
@@ -38,6 +39,9 @@ function Home() {
     <Container fluid>
       <Row>
         <Col xs="10">
+          <Row className="p-1">
+            <AnnounceBar />
+          </Row>
           <Row>
             <Col className="p-1">
               <Slide />
@@ -65,7 +69,7 @@ function Home() {
             </Col>
           </Row>
         </Col>
-        <Col xs="2">
+        <Col xs="2" className="App-textSmall">
           <Row className="p-1">
             <ListBox />
           </Row>

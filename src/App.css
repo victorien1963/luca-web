@@ -2,12 +2,29 @@
   text-align: center;
 }
 
+.App-textSmall {
+  font-size: 0.5rem;
+}
+
 .App-textLeft{
   text-align: left;
 }
 
 .App-textCenter{
   text-align: center;
+}
+
+.App-textEllipsis{
+  height: 2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.App-blackPanel{
+  opacity: 0.5;
+  background-color: #282c34;
 }
 
 .App-logo {
