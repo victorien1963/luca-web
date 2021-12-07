@@ -1,3 +1,5 @@
+/* App */
+
 .App {
   text-align: center;
 }
@@ -14,6 +16,46 @@
   height: 40vmin;
   pointer-events: none;
 }
+
+/* the Variants color of Luca only! */
+
+.text-luca{
+  color: rgb(49 121 133);
+}
+
+.bg-luca{
+  background-color: rgb(49 121 133);
+}
+
+.btn-luca{
+  color: #fff;
+  background-color: rgb(49 121 133);
+}
+
+/* font color */
+
+.text-white{
+  color:#fff;
+}
+
+/* icons */
+
+.nav-icons > div > a > img{
+  padding: 0;
+  width: 20px;
+  height: 20px;
+}
+
+/* img and cards */
+.home-content-cards > div > img {
+  height: 192px;
+  width: fit-content;
+  padding: 1rem;
+  margin: 0 auto;
+
+}
+
+/* RWD */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,6 +77,7 @@
 .App-link {
   color: #61dafb;
 }
+
 
 @keyframes App-logo-spin {
   from {
