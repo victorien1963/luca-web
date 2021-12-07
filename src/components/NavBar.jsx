@@ -12,24 +12,25 @@ function NavBar() {
     <Navbar bg="luca" expand="lg">
       <Container>
         <Navbar.Brand className="text-white" href="/">
-        <img
-          src={homeLogo}
-          width="30"
-          height="30"
-          className="d-inline-block align-top me-2"
-          alt="logo"
-        />
-         L U C A
+          <img
+            src={homeLogo}
+            width="30"
+            height="30"
+            className="d-inline-block align-top me-2"
+            alt="logo"
+          />
+          L U C A
         </Navbar.Brand>
-        
-
 
         <div className="ms-auto d-flex">
-          {/*Bell*/}
+          {/* Bell */}
           <Navbar.Toggle aria-controls="navbar-nav-bell" />
           <Navbar.Collapse id="navbar-nav-bell">
             <Nav className="nav-icons ms-auto">
-              <NavDropdown title={<img src={bellIcon} alt="User"></img>} id="nav-dropdown-bell">
+              <NavDropdown
+                title={<img src={bellIcon} alt="User" />}
+                id="nav-dropdown-bell"
+              >
                 <NavDropdown.Item>系統通知示意</NavDropdown.Item>
                 <NavDropdown.Item>系統通知示意</NavDropdown.Item>
                 <NavDropdown.Item>系統通知示意</NavDropdown.Item>
@@ -37,11 +38,14 @@ function NavBar() {
             </Nav>
           </Navbar.Collapse>
 
-          {/*User*/}
+          {/* User */}
           <Navbar.Toggle aria-controls="navbar-nav-user" />
           <Navbar.Collapse id="navbar-nav-user">
             <Nav className="nav-icons ms-auto">
-              <NavDropdown title={<img src={userIcon} alt="User"></img>} id="nav-dropdown-user">
+              <NavDropdown
+                title={<img src={userIcon} alt="User" />}
+                id="nav-dropdown-user"
+              >
                 <NavDropdown.Item href="/Info">會員中心</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/">登出</NavDropdown.Item>

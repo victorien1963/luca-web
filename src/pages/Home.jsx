@@ -12,22 +12,19 @@ function Home() {
     {
       title: '申請開戶',
       content: '在 PUNWAVE 的技術架構下，Nautilus 報表系統承襲跨媒體的優勢。',
-      imgSrc:
-      (addImg),
+      imgSrc: addImg,
       link: '/OpenAccount',
     },
     {
       title: '廣告帳戶管理',
       content: '在 PUNWAVE 的技術架構下，Nautilus 報表系統承襲跨媒體的優勢。',
-      imgSrc:
-      (mngImg),
+      imgSrc: mngImg,
       link: '/Billing',
     },
     {
       title: '廣告投放與優化',
       content: '在 PUNWAVE 的技術架構下，Nautilus 報表系統承襲跨媒體的優勢。',
-      imgSrc:
-      (anaImg),
+      imgSrc: anaImg,
       link: '/Accounts',
     },
   ]
