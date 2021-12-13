@@ -4,11 +4,11 @@ import Form from 'react-bootstrap/Form'
 
 function Searchbar(props) {
   const { setting } = props
-  const { title, method, content } = setting
+  const { method, content } = setting
   return (
     <Form className="App-textLeft">
       <Form.Group className="mb-3">
-        <Form.Label>{title}</Form.Label>
+        {/* <Form.Label>{title}</Form.Label> */}
         <Form.Select aria-label="Default select example" onChange={method}>
           {content.map((c, i) => (
             <option ket={i} value={c}>

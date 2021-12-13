@@ -16,7 +16,7 @@ function InfoDialog(props) {
       </Modal.Body>
 
       <Modal.Footer>
-        <Button variant="primary" onClick={handleClose}>
+        <Button variant="luca" onClick={handleClose}>
           Confirm
         </Button>
       </Modal.Footer>

@@ -1,27 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 
 function ShowcaseCard(props) {
   const { setting } = props
-  const { title, content, imgSrc, link, method } = setting
+  const { title, content, imgSrc, link, btnText, method } = setting
   return (
-    <Card className="p-0">
+    <Card className="App-textCenter p-0">
       {imgSrc && <Card.Img src={imgSrc} variant="top" />}
       <Card.Body>
         {title && <Card.Title>{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
+        {link && (
+          <Link to={link}>
+            <Button>{btnText}</Button>
+          </Link>
+        )}
+        {method && <Button onClick={method}>Method</Button>}
       </Card.Body>
-      {link && (
-        <Card.Footer>
-          <Card.Link href={link}>Link</Card.Link>
-        </Card.Footer>
-      )}
-      {method && (
-        <Card.Footer>
-          <Card.Link onClick={method}>method</Card.Link>
-        </Card.Footer>
-      )}
     </Card>
   )
 }

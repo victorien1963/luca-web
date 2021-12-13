@@ -4,9 +4,9 @@ import Navbar from 'react-bootstrap/Navbar'
 
 function Footer() {
   return (
-    <Navbar bg="light" expand="lg">
-      <Container className="justify-content-center">
-        潮網科技 all rights reserved.
+    <Navbar bg="lucaMid" expand="lg">
+      <Container className="justify-content-center text-light App-textMid">
+        Copyright © 2021 Wavenet. all rights reserved.
       </Container>
     </Navbar>
   )

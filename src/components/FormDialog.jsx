@@ -7,9 +7,9 @@ import Image from 'react-bootstrap/Image'
 
 function FormDialog(props) {
   const { show, handleClose, setting } = props
-  const { imgSrc, title, content } = setting
+  const { imgSrc, title, content, size } = setting
   return (
-    <Modal show={show} onHide={() => handleClose()}>
+    <Modal size={size} show={show} onHide={() => handleClose()}>
       <Modal.Header>
         {imgSrc && <Image src={imgSrc} fluid />}
         {title && <Modal.Title>{title}</Modal.Title>}
@@ -36,7 +36,7 @@ function FormDialog(props) {
         <Button variant="secondary" onClick={() => handleClose()}>
           Cancel
         </Button>
-        <Button variant="primary" onClick={() => handleClose(setting.content)}>
+        <Button variant="luca" onClick={() => handleClose(setting.content)}>
           Confirm
         </Button>
       </Modal.Footer>
