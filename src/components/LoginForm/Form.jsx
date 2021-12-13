@@ -8,14 +8,62 @@ import RegisterForm from './RegisterForm'
 function Form(props) {
   const [action, setAction] = useState('login')
   const { show, handleClose } = props
-  const fakeAuth = { status: 'authed', name: 'RD' }
+  // const fakeAuth = { status: 'authed', name: 'RD' }
+  const [data, setdata] = useState({ email: '', password: '' })
+  const onDataChange = (event) => {
+    setdata({ ...data, [event.target.name]: event.target.value })
+  }
   return (
     <Modal show={show} onHide={() => handleClose()} className="p-2">
       <Modal.Body>
         <Modal.Title>{action === 'login' ? 'Login' : 'Register'}</Modal.Title>
-        {action === 'login' && <LoginForm />}
-        {action === 'register' && <RegisterForm />}
-        <Button variant="primary" onClick={() => handleClose(fakeAuth)}>
+        {action === 'login' && (
+          <LoginForm
+            setting={{
+              fields: [
+                {
+                  label: 'Email address',
+                  name: 'email',
+                  type: 'email',
+                  placeholder: 'Enter Email...',
+                },
+                {
+                  label: 'Password',
+                  name: 'password',
+                  type: 'password',
+                  placeholder: 'Enter Password...',
+                },
+              ],
+              onDataChange,
+            }}
+          />
+        )}
+        {action === 'register' && (
+          <RegisterForm
+            setting={{
+              fields: [
+                {
+                  label: 'Email address',
+                  name: 'email',
+                  type: 'email',
+                  placeholder: 'Enter Email...',
+                },
+                {
+                  label: 'Password',
+                  name: 'password',
+                  type: 'password',
+                  placeholder: 'Enter Password...',
+                },
+              ],
+              onDataChange,
+            }}
+          />
+        )}
+        <Button
+          variant="primary"
+          onClick={() => handleClose(data)}
+          disabled={Object.keys(data).some((key) => data[key] === '')}
+        >
           {action === 'login' ? 'Login' : 'Register'}
         </Button>
       </Modal.Body>

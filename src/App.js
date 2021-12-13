@@ -3,17 +3,21 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import { NavBar, Footer, LoginForm, ScrollToTop } from './components'
 import { Home, Info, OpenAccount, Accounts, Billing } from './pages'
+import apiService from './services/apiService'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   const [auth, setauth] = useState({ status: 'unauthed' })
   const [show, setshow] = useState(false)
   const handleLoginShow = () => setshow(true)
-  const handleLoginClose = (value) => {
+  const handleLoginClose = async (value) => {
     setshow(false)
     if (value) {
       // should have a wrapper or local storage
-      setauth(value)
+      const res = await apiService.login(value)
+      if (!res.error) {
+        setauth({ ...res, status: 'authed' })
+      }
       // cookies
       document.cookie = 'status=authed'
       document.cookie = 'name=RD'
