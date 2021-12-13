@@ -8,7 +8,7 @@ function ShowcaseCard(props) {
   const { setting } = props
   const { title, content, imgSrc, link, btnText, method } = setting
   return (
-    <Card className="App-textCenter p-0">
+    <Card className="App-textCenter">
       {imgSrc && <Card.Img src={imgSrc} variant="top" />}
       <Card.Body>
         {title && <Card.Title>{title}</Card.Title>}
@@ -18,7 +18,7 @@ function ShowcaseCard(props) {
             <Button>{btnText}</Button>
           </Link>
         )}
-        {method && <Button onClick={method}>Method</Button>}
+        {method && <Button onClick={method}>申請帳戶</Button>}
       </Card.Body>
     </Card>
   )

@@ -5,20 +5,22 @@ import ProgressBar from 'react-bootstrap/ProgressBar'
 
 function Progress(props) {
   const { setting } = props
-  const { title, data } = setting
+  const { title, titleEng, data } = setting
   return (
-    <Card className="p-0 App-textLeft">
+    <Card className="p-3 App-textLeft recharge-card">
       <Card.Body>
         {title && <Card.Title>{title}</Card.Title>}
-        <ProgressBar className="rounded-pill" style={{ height: '32px' }}>
+        {titleEng && <Card.Text>{titleEng}</Card.Text>}
+        <ProgressBar className="rounded-pill fs-5" style={{ height: '32px' }}>
           <ProgressBar
+            variant="warning"
             animated
             now={(data.spend / data.total) * 100}
             label={`$${data.spend}`}
             key={1}
           />
           <ProgressBar
-            variant="light"
+            className="bg-grey"
             now={100 - (data.spend / data.total) * 100}
             label={`$${data.total}`}
             key={1}
@@ -36,8 +38,9 @@ Progress.propTypes = {
 
 Progress.defaultProps = {
   setting: {
-    title: '儲值金額',
-    data: { spend: 12334, total: 18000 },
+    title: '儲 值 金 額',
+    titleEng: 'Total amount',
+    data: { spend: 12000, total: 18000 },
   },
 }
 

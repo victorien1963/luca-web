@@ -32,7 +32,7 @@ function Datatable(props) {
             ))}
         </tbody>
       </Table>
-      <Pagination className="justify-content-center">
+      <Pagination className="justify-content-center pagination-card">
         <Pagination.Prev onClick={() => setpage(page - 1)} />
         {Array.from(
           {
@@ -41,6 +41,7 @@ function Datatable(props) {
           (v, i) => i + 1
         ).map((number) => (
           <Pagination.Item
+            className="pagination-card-bg"
             key={number}
             active={number === page}
             onClick={() => setpage(number)}
@@ -62,22 +63,22 @@ Datatable.defaultProps = {
   setting: {
     hasCheckBox: false,
     pageSize: 5,
-    headers: ['帳戶名稱', '花費金額'],
+    headers: ['帳 戶 名 稱', '花 費 金 額'],
     content: [
-      { name: '泛科知識(業二)', amount: '$330' },
-      { name: 'PanMedia', amount: '$440' },
-      { name: 'PanMedia', amount: '$440' },
-      { name: 'PanMedia', amount: '$440' },
-      { name: 'PanMedia', amount: '$440' },
-      { name: 'PanMedia', amount: '$440' },
-      { name: 'PanMedia', amount: '$440' },
-      { name: 'PanMedia', amount: '$440' },
-      { name: 'PanMedia', amount: '$440' },
-      { name: 'PanMedia', amount: '$440' },
-      { name: 'PanMedia', amount: '$440' },
-      { name: 'PanMedia', amount: '$440' },
-      { name: 'PanMedia', amount: '$440' },
-      { name: 'PanMedia', amount: '$440' },
+      { name: '泛科知識(業二)', amount: '$ 1,330' },
+      { name: '泛科知識(業一)', amount: '$ 1,440' },
+      { name: 'PanMedia', amount: '$ 1,920' },
+      { name: 'PanMedia', amount: '$ 440' },
+      { name: 'PanMedia', amount: '$ 440' },
+      { name: 'PanMedia', amount: '$ 740' },
+      { name: 'PanMedia', amount: '$ 125' },
+      { name: 'PanMedia', amount: '$ 440' },
+      { name: 'PanMedia', amount: '$ 688' },
+      { name: 'PanMedia', amount: '$ 440' },
+      { name: 'PanMedia', amount: '$ 5,000' },
+      { name: 'PanMedia', amount: '$ 440' },
+      { name: 'PanMedia', amount: '$ 1,711' },
+      { name: 'PanMedia', amount: '$ 440' },
     ],
   },
 }

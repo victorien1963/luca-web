@@ -49,9 +49,13 @@
   pointer-events: none;
 }
 
-/* The variants of Luca only */
+/* ! LUCA ONLY ! */
 .text-luca{
   color: #317985;
+}
+
+.text-lucaDark{
+  color: #21515a;
 }
 
 .bg-luca{
@@ -71,11 +75,11 @@
 }
 
 .btn-luca{
-  color: #fff;
-  background-color: #317985;
+  color: #fff !important;
+  background-color: rgb(73 155 169) !important; 
 }
 
-/* Font color */
+/* The other colors of text, bg... */
 .text-white{
   color: #fff;
 }
@@ -84,22 +88,28 @@
   color: #777;
 }
 
+.bg-grey{
+  background-color: rgb(201, 201, 201) !important;
+}
+
 .text-black{
   color: #000;
 }
 
-/* Icons */
+/* Card & Img  */
 .nav-icons > div > a > img{
   padding: 0;
   width: 20px;
   height: 20px;
 }
 
-/* Card & Img  */
+.projImgSize {
+  height: 8vw;
+}
+
 .home-function-cards > div:hover {
   box-shadow: 0px 0px 3px 3px rgb(207 228 229 / 50%);
 }
-
 
 .home-content-cards > div > div {
   padding-top: 2rem;
@@ -112,6 +122,36 @@
   margin: 0 auto;
 }
 
+/* Pagination */
+.pagination-card-bg > span{
+  background-color: rgb(73 155 169) !important;
+  border-color: rgb(73 155 169) !important;
+  color: #fff !important;
+}
+
+.pagination-card-bg > li > a > span{
+  color: rgb(73 155 169) !important;
+}
+
+.page-link{
+  color: #317985 !important;
+}
+
+/* Recharge */
+.recharge-card > div{
+  text-align: left;
+  padding: 1rem;
+}
+
+.recharge-card > div > .card-title{
+  padding: .5rem .5rem 0rem 1rem;
+  margin-bottom: 0rem;
+}
+
+.recharge-card > div > .card-text{
+  padding: 0rem .5rem 0rem 1rem;
+}
+
 .card-body > a > button {
   background-color: rgb(73 155 169);
   border-color: rgb(73 155 169);
@@ -122,25 +162,104 @@
   border-color: rgb(49 121 133);
 }
 
+.card-body > a > button:focus {
+  background-color: rgb(49 121 133);
+  border-color: rgb(49 121 133);
+}
+
 .card-body > a > button:active {
   background-color: rgb(49 121 133);
   border-color: rgb(49 121 133);
 }
 
+/* Homepage - Statistic */
 .card-img-overlay{
   padding: 0.5rem !important;
 }
 
 .statistic-card{
-  min-height: 30rem;
+  min-height: 27rem;
 }
 
 .statistic-card > .card-body{
   background-image: url('./components/images/StatisticBox-bg2.svg');
   background-repeat: no-repeat;
-  background-size: 25rem;
+  background-size: 22rem;
   background-position: 90% 90%;
 }
+
+
+/* Open account */
+.openAcc > div{
+  height: 26vw;
+  padding: 1.2rem;
+}
+
+.openAcc > div:hover{
+  box-shadow: 0px 0px 3px 3px rgb(207 228 229 / 50%);
+}
+
+.openAcc > div > img{
+  width: 70%;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.openAcc > div > div > div {
+  margin: .3rem .5rem 1rem .5rem ;
+}
+
+.openAcc > div > div > .card-title {
+  color: #21515a;
+  font-size: 1.7rem;
+}
+
+.openAcc > div > div > p {
+  height: 3.5vw;
+  font-weight: 500;
+  color: #7c8a8d;
+}
+
+.openAcc > div > div > button {
+  background-color: rgb(73 155 169);
+  border-color: rgb(73 155 169);
+}
+
+.openAcc > div > div > button:focus {
+  background-color: rgb(49 121 133);
+  border-color: rgb(49 121 133);
+}
+
+.openAcc > div > div > button:hover {
+  background-color: rgb(49 121 133);
+  border-color: rgb(49 121 133);
+}
+
+.openAcc > div > div > button:active {
+  background-color: rgb(49 121 133);
+  border-color: rgb(49 121 133);
+}
+
+/* Open account - Form */
+.AccFormModal > img {
+  width: 20vw;
+}
+
+.AccFormModal > div > h4 {
+  margin-top: 1rem;
+}
+
+.AccFormModal > div > p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.Form-card > div:nth-child(1) {
+  font-size: 1.07rem;
+  font-weight: 500;
+  color:#21515a;
+}
+
 
 /* RWD */
 @media (prefers-reduced-motion: no-preference) {

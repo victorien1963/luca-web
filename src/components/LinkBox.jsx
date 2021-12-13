@@ -13,7 +13,7 @@ function LinkBox(props) {
         <hr />
         {content.map((c, i) => (
           <Card key={i} className="my-2">
-            <Card.Img src={c.imgSrc} alt="Card image" />
+            <Card.Img className="projImgSize" src={c.imgSrc} alt="Card image" />
             <Card.ImgOverlay className="d-flex App-blackPanel">
               {/* <Card.Title>{c.title}</Card.Title> */}
               <div className="d-flex align-items-end App-textLeft p-1">
