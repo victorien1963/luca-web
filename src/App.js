@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import { NavBar, Footer, LoginForm, ScrollToTop } from './components'
-import { Home, Info, OpenAccount, Accounts, Billing } from './pages'
+import { Home, Info, OpenAccount, Accounts, Billing, Users } from './pages'
 import apiService from './services/apiService'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -42,6 +42,7 @@ function App() {
               <Route path="/Accounts" element={<Accounts />} />
               <Route path="/Billing" element={<Billing />} />
               <Route path="/Info" element={<Info />} />
+              <Route path="/Users" element={<Users />} />
               <Route path="/*" element={<Home />} />
             </Routes>
           </ScrollToTop>

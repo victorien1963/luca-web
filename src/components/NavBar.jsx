@@ -19,7 +19,7 @@ function NavBar() {
         expand="lg"
         sticky="top"
         // className="position-fixed w-100"
-        style={{ zIndex: '999' }}
+        style={{ zIndex: '1500' }}
       >
         <Container>
           <Navbar.Brand className="text-white" href="/">
@@ -71,7 +71,7 @@ function NavBar() {
           </div>
         </Container>
       </Navbar>
-      <SideBar show={show} />
+      <SideBar show={show} handleSideBar={handleSideBar} />
     </>
   )
 }

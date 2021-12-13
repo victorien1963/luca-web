@@ -59,12 +59,12 @@ function Home(props) {
                 title: `${
                   auth.status === 'authed'
                     ? `H i ! ${auth.name} ，歡迎回到 L U C A，今天想做點什麼呢 ？`
-                    : `H i ! ${auth.name} ，歡迎回到 L U C A，今天想做點什麼呢 ？`
+                    : `H i ! 歡迎來到 L U C A，今天想做點什麼呢 ？`
                 } `,
                 titleEng: `${
                   auth.status === 'authed'
                     ? `H i ! ${auth.name}, how's today ? welcome back to L U C A，have you any plan ？`
-                    : `H i ! ${auth.name}, how's today ? welcome back to L U C A，have you any plan ？`
+                    : `H i ! welcome to L U C A，have you any plan ？`
                 } `,
               }}
             >
