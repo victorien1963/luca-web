@@ -9,7 +9,7 @@ function Accounts() {
       <Row>
         <AccountList
           setting={{
-            title: '帳戶管理',
+            title: '帳 戶 管 理',
             content: [
               { text: 'nautilus', link: 'https://nautilus.punwave.com/' },
               { text: 'nautilus', link: 'https://nautilus.punwave.com/' },

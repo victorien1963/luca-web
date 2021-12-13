@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 // import homeLogo from './images/react-brands.svg'
-import lucaLogo from './images/luca-logo.svg'
+import lucaLogo from './images/luca-logo.png'
 import userIcon from './images/user-solid.svg'
 import bellIcon from './images/bell-solid.svg'
 

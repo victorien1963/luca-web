@@ -7,7 +7,7 @@ function StatisticBox(props) {
   const { title, titleEng, data1, data2, data3, data4, data5, link, method } =
     setting
   return (
-    <Card className="statistic-card p-3 fs-lg-3 fs-5 lh-lg">
+    <Card className="statistic-card p-3 fs-lg-3 fs-5 lh-md">
       <Card.Body>
         {title && <Card.Title className="mb-0">{title}</Card.Title>}
         {titleEng && <Card.Text className="fs-6">{titleEng}</Card.Text>}

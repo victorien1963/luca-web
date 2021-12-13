@@ -7,20 +7,25 @@ import Image from 'react-bootstrap/Image'
 
 function FormDialog(props) {
   const { show, handleClose, setting } = props
-  const { imgSrc, title, content, size } = setting
+  const { imgSrc, title, titleEng, content, size } = setting
   return (
     <Modal size={size} show={show} onHide={() => handleClose()}>
-      <Modal.Header>
+      <Modal.Header className="AccFormModal justify-content-center text-center">
         {imgSrc && <Image src={imgSrc} fluid />}
-        {title && <Modal.Title>{title}</Modal.Title>}
+        {title && (
+          <Modal.Title>
+            <h4>{title}</h4>
+            <p>{titleEng}</p>
+          </Modal.Title>
+        )}
       </Modal.Header>
 
       <Modal.Body>
-        <Form className="p-3">
+        <Form className="px-5 py-3 Form-card">
           {content.map((c) => (
-            <Form.Group key={c.name} className="mb-3">
+            <Form.Group key={c.name} className="mb-3 px-5 lh-md">
               {c.type === 'fixed' ? (
-                `${c.name}: ${c.value}`
+                `${c.name} ： ${c.value}`
               ) : (
                 <>
                   <Form.Label>{c.name}</Form.Label>
@@ -32,12 +37,12 @@ function FormDialog(props) {
         </Form>
       </Modal.Body>
 
-      <Modal.Footer>
+      <Modal.Footer className="justify-content-center">
         <Button variant="secondary" onClick={() => handleClose()}>
-          Cancel
+          取 消
         </Button>
         <Button variant="luca" onClick={() => handleClose(setting.content)}>
-          Confirm
+          送 出
         </Button>
       </Modal.Footer>
     </Modal>
@@ -53,6 +58,7 @@ FormDialog.propTypes = {
 FormDialog.defaultProps = {
   setting: {
     title: '申請廣告帳戶',
+    titleEng: 'Open the advertising account',
     content: [
       { name: '用戶名稱', type: 'fixed', value: 'Kevin' },
       { name: '帳戶名稱', type: 'text', value: '' },
