@@ -32,19 +32,19 @@ Slide.defaultProps = {
     interval: 6000,
     content: [
       {
-        label: 'First Slide',
+        label: '2022潮網 New SaaS 數據驅動服務',
         content: '在 PUNWAVE 的技術架構下，Nautilus 報表系統承襲跨媒體的優勢。',
         imgSrc:
           'https://www.wavenet.com.tw/wp-content/uploads/2021/11/首頁-Banner-Slider-1920x600.001-min.png',
       },
       {
-        label: 'Second Slide',
+        label: '對抗演算法!降觸及也不怕的互動攻略',
         content: '在 PUNWAVE 的技術架構下，Nautilus 報表系統承襲跨媒體的優勢。',
         imgSrc:
           'https://www.wavenet.com.tw/wp-content/uploads/2021/11/首頁-Banner-Slider-1920x600.001-min.png',
       },
       {
-        label: 'Third Slide',
+        label: 'T潮網數據洞察平台協助企業挖掘商機',
         content: '在 PUNWAVE 的技術架構下，Nautilus 報表系統承襲跨媒體的優勢。',
         imgSrc:
           'https://www.wavenet.com.tw/wp-content/uploads/2021/11/首頁-Banner-Slider-1920x600.001-min.png',

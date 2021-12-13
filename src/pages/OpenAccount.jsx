@@ -3,6 +3,10 @@ import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 import { FormDialog, InfoDialog, ShowcaseCard } from '../components'
+import FacebookImg from './images/acc-facebook.png'
+import YahooImg from './images/acc-yahoo.png'
+import TwitterImg from './images/acc-twitter.png'
+import GoogleImg from './images/acc-google.png'
 
 function OpenAccount() {
   const [showInfo, setshowInfo] = useState(false)
@@ -21,32 +25,28 @@ function OpenAccount() {
     {
       title: 'Facebook',
       content: '在社群網站上爭取大量曝光，取得最佳廣告成效',
-      imgSrc:
-        'https://www.wavenet.com.tw/wp-content/uploads/2020/01/Nautilus-%E5%84%AA%E5%8B%A2_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%95%B4%E5%90%88-min.jpeg',
+      imgSrc: FacebookImg,
       // link: '/OpenAccount?target=Facebook',
       method: handleShowForm,
     },
     {
       title: 'Yahoo',
       content: '在Yahoo服務秀出廣告，發現無限商機',
-      imgSrc:
-        'https://www.wavenet.com.tw/wp-content/uploads/2020/01/Nautilus-%E5%84%AA%E5%8B%A2_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%95%B4%E5%90%88-min.jpeg',
+      imgSrc: YahooImg,
       // link: '/OpenAccount?target=Yahoo',
       method: handleShowForm,
     },
     {
       title: 'Google',
       content: '透過主流搜尋引擎和GDN聯播網精準鎖定客群',
-      imgSrc:
-        'https://www.wavenet.com.tw/wp-content/uploads/2020/01/Nautilus-%E5%84%AA%E5%8B%A2_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%95%B4%E5%90%88-min.jpeg',
+      imgSrc: GoogleImg,
       // link: '/OpenAccount?target=Google',
       method: handleShowForm,
     },
     {
       title: 'Twitter',
       content: '打入Twitter生活圈，發掘潛在客戶',
-      imgSrc:
-        'https://www.wavenet.com.tw/wp-content/uploads/2020/01/Nautilus-%E5%84%AA%E5%8B%A2_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%95%B4%E5%90%88-min.jpeg',
+      imgSrc: TwitterImg,
       // link: '/OpenAccount?target=Twitter',
       method: handleShowForm,
     },
@@ -59,7 +59,7 @@ function OpenAccount() {
       </Row>
       <Row>
         {fakeGrids.map((grid) => (
-          <Col key={grid.title} xs={4} className="p-2">
+          <Col key={grid.title} xs={3} className="p-2">
             <ShowcaseCard setting={grid} />
           </Col>
         ))}

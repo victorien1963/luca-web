@@ -6,16 +6,16 @@ import Button from 'react-bootstrap/Button'
 
 function ShowcaseCard(props) {
   const { setting } = props
-  const { title, content, imgSrc, link, method } = setting
+  const { title, content, imgSrc, link, btnText, method } = setting
   return (
-    <Card className="p-0">
+    <Card className="App-textCenter p-0">
       {imgSrc && <Card.Img src={imgSrc} variant="top" />}
       <Card.Body>
         {title && <Card.Title>{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
         {link && (
           <Link to={link}>
-            <Button>Link</Button>
+            <Button>{btnText}</Button>
           </Link>
         )}
         {method && <Button onClick={method}>Method</Button>}

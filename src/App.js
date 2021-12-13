@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="min-vh-100">
+      <div className="min-vh-100 bg-lucaLighter">
         <Router>
           <NavBar setting={{ auth, handleLoginShow, handleLogOut }} />
           <ScrollToTop>

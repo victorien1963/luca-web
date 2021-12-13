@@ -60,7 +60,7 @@ function Form(props) {
           />
         )}
         <Button
-          variant="primary"
+          variant="luca"
           onClick={() => handleClose(data)}
           disabled={Object.keys(data).some((key) => data[key] === '')}
         >

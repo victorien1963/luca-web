@@ -36,7 +36,7 @@ function FormDialog(props) {
         <Button variant="secondary" onClick={() => handleClose()}>
           Cancel
         </Button>
-        <Button variant="primary" onClick={() => handleClose(setting.content)}>
+        <Button variant="luca" onClick={() => handleClose(setting.content)}>
           Confirm
         </Button>
       </Modal.Footer>
