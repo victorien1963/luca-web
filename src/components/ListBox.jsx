@@ -14,7 +14,13 @@ function ListBox(props) {
         <hr />
         <ListGroup variant="flush">
           {content.map((c, i) => (
-            <ListGroup.Item key={i} as="a" active={false} href={c.link}>
+            <ListGroup.Item
+              key={i}
+              as="a"
+              className="App-oneLineEllipsis px-0"
+              active={false}
+              href={c.link}
+            >
               <span className="text-luca">○ </span>
               {c.text}
             </ListGroup.Item>
